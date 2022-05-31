@@ -53,7 +53,8 @@
     h1 {text-align: center;}
     html {margin-bottom: 50px;
     margin-top:3%;}
-a {color:black;}
+a {color:black;
+  cursor:all-scroll;}
   
      
  </style>
