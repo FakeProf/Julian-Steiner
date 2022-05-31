@@ -54,6 +54,9 @@
     html {margin-bottom: 50px;
     margin-top:3%;}
   html {color:green;}
+  head {color:red;}
+  body {color:blue;}
+  
      
  </style>
  </head>
