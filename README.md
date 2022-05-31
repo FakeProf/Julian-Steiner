@@ -54,17 +54,7 @@
     h1 {text-align: center;}
     html {margin-bottom: 50px;
     margin-top:3%;}
-    h1 {
-    width: 20   00px;
-    height: 50px;
-    transition: width 3s;
-    -webkit-transition: width 3s;
-    text-decoration: none;
-    
-}
-h1:hover {
-    width: 200px;
-}   
+     
  </style>
  </head>
  <bod>
