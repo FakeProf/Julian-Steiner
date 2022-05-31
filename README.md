@@ -53,6 +53,7 @@
     h1 {text-align: center;}
     html {margin-bottom: 50px;
     margin-top:3%;}
+  body {color:white;}
      
  </style>
  </head>
