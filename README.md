@@ -56,9 +56,9 @@
      
  </style>
  </head>
- <bod>
+ <body>
  <h1>Julian Steiner </h1>
      
   
- </bod>
+ </body>
  </html>
