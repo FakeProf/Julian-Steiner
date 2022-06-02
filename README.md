@@ -54,7 +54,7 @@
     html {margin-bottom: 50px;
     margin-top:3%;}
 a {color:black;
-  cursor:all-scroll;
+  cursor:no-drop;
   text-decorations:none;}
   
      
