@@ -263,6 +263,42 @@ background-color: #c3cfe2;box-sizing: border-box; font-family: 'Spartan';
   margin: 5% 20% 0 20% ;
   text-align: center;
 }
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+  margin-top: 1.5em;
+}
 /*video*/
 video{
   width: auto;
@@ -307,14 +343,99 @@ video{
      }
      
    
-   .right { width: 400px; padding: 15px 20px;
+   .right1 { width: 400px; padding: 15px 20px;
    text-align: left;
      transform: rotateY(90deg);
    transform-origin: left center;
      transform-style: preserve-3d;
       backface-visibility: hidden;
+      position: absolute; top:0; left:0;
+      
    }
- 
+   .right2 { width: 400px; padding: 15px 20px;
+    text-align: left;
+      transform: rotateY(90deg);
+    transform-origin: left center;
+      transform-style: preserve-3d;
+       backface-visibility: hidden;
+       position: absolute; top:0; left:0;
+       margin: 0 0 100% 0;
+    }
+    .right3 { width: 400px; padding: 15px 20px;
+      text-align: left;
+        transform: rotateY(90deg);
+      transform-origin: left center;
+        transform-style: preserve-3d;
+         backface-visibility: hidden;
+         position: absolute; top:0; left:0;
+         
+      }
+      .right4 { width: 400px; padding: 15px 20px;
+        text-align: left;
+          transform: rotateY(90deg);
+        transform-origin: left center;
+          transform-style: preserve-3d;
+           backface-visibility: hidden;
+           position: absolute; top:0; left:0;
+           
+        }
+        .right5 { width: 400px; padding: 15px 20px;
+          text-align: left;
+            transform: rotateY(90deg);
+          transform-origin: left center;
+            transform-style: preserve-3d;
+             backface-visibility: hidden;
+             position: absolute; top:0; left:0;
+             
+          }
+          .right6 { width: 400px; padding: 15px 20px;
+            text-align: left;
+              transform: rotateY(90deg);
+            transform-origin: left center;
+              transform-style: preserve-3d;
+               backface-visibility: hidden;
+               position: absolute; top:0; left:0;
+               
+            }
+
+            .tech-slideshow {
+              height: 200px;
+              max-width: 100%;
+              margin: 0 auto;
+              position: relative;
+              overflow: hidden;
+              transform: translate3d(0, 0, 0);
+            }
+            
+            .tech-slideshow > div {
+              height: 200px;
+              width: 20526px;
+              background: url(4319590.jpg) ;
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              transform: translate3d(0, 0, 0);
+            }
+            .tech-slideshow .mover-1 {
+              animation: moveSlideshow 55s linear infinite;
+            }
+            .tech-slideshow .mover-2 {
+              opacity: 0;
+              transition: opacity 0.5s ease-out;
+              background-position: 0 -200px;
+              animation: moveSlideshow 15s linear infinite;
+            }
+            .tech-slideshow:hover .mover-2 {
+              opacity: 1;
+            }
+            
+            @keyframes moveSlideshow {
+              100% { 
+                transform: translateX(-66.6666%);  
+              }
+            }
+          
 
 
 /*überschrift teil 2 etc.*/
@@ -328,7 +449,7 @@ video{
 
 }
 .text1{
-  margin: 20% 15% 0 50%;
+  margin: 23% 15% 0 50%;
   position: absolute;
   font-size: 2em;
 }
@@ -336,7 +457,7 @@ video{
   margin: 15% 10% 0 55%;
 }
 .text2{
-  margin: 20% 50% 0 15%;
+  margin: 17% 50% 0 15%;
   position: absolute;
   font-size: 2em;
   
