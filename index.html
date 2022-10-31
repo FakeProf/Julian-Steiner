@@ -14,23 +14,74 @@
    <link rel="apple-touch-icon" href="see sonnenuntergang.jpeg" sizes="180x180">
 </head>
 <body>
+  <div class="ring">Loading
+    <span id="ring"></span>
+  </div>
+
  
-  
+
+
+
+
+
+ 
+
+
+
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <nav id="navbar" class="">
     <div class="nav-wrapper">
       <!-- Navbar Logo -->
       <div class="logo">
         <!-- Logo Placeholder for Inlustration -->
-        <a href="#home"><i class="fa fa-light fa-code"></i>  <h2 class="h22">
+        <a href="#home"><i class="fa fa-light fa-code "></i>  <h2 class="h22">
        Julian Steiner
           <span class="spans">  Julian Steiner</span>
           <span class="spans">Julian Steiner</span>
           <span class="spans">  Webdevelopment</span>
           <span class="spans">  Webdevelopment</span>
-      </h2></a>
+        </h2></a>
       </div>
-   
+      <button type="button" onclick="aud_play_pause()" id="play" >
+     <!-- <svg version="1.1" id="plays" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="50px" width="50px"
+    viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+    <path class="stroke-solid" fill="none" stroke="#ddbe72"  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5"/>
+    <path class="icons" fill="#ddbe72" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+    
+    
+  </svg>-->           
+  <div class="center">
+    <div id="control">
+      <div class="border"></div>
+      <div class="play"></div>
+    </div>
+  </div>
+</button> 
+<script>var playButton = document.getElementById('control');
+
+  playButton.addEventListener('click', e => {
+    e.preventDefault();
+    playButton.classList.toggle('is--playing');
+  });</script>
+
+<audio id="myAudio" autoplay loop>
+  <source src="mindfulness-journey-ambient-boy-main-version-13506-09-58.mp3" type="audio/mpeg">
+  This HTML5 player is not supported by your browser
+</audio>
+
+<script>
+  function aud_play_pause() {
+   var myAudio = document.getElementById("myAudio");
+   if (myAudio.paused) {
+     myAudio.play();
+   } else {
+     myAudio.pause();
+   }
+  }
+  </script>
+
+
       <!-- Navbar Links -->
       <ul id="menu">
         <li><a href="#home">Home</a></li><!--
@@ -56,6 +107,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      
   </div> 
   <script>
   let menuIcon = document.querySelector('.menuIcon');
@@ -253,7 +305,7 @@ user-select: none;
 <div data-aos="fade-up"
 data-aos-anchor-placement="bottom-bottom">
 <h3 data-aos="fade-up"
-data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian Steiner 18 Jahre alt und beschäfige micht seit 1,5 Jahren mit der Programmierung von Websiten</h3></div>
+data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian Steiner 18 Jahre alt und beschäfige micht seit 1,5 Jahren mit der Programmierung von Webseiten</h3></div>
    
     <div data-aos="zoom-in"  data-aos-duration="1000000"><h2 class="h2">Über mich</h2></div>
    
@@ -324,9 +376,12 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
       </figcaption>
     </figure>
      
-      
-    <div class="feld" width="200px" height="400p"></div>
-      <div data-aos="fade-up-left">
+   
+    <div class="tech-slideshow">
+      <div class="mover-1"></div>
+      <div class="mover-2"></div>
+    </div>
+    <div data-aos="fade-up-left">
 
         <img class="bild3" src="äste im winter.jpeg" width="70%" height="400" style="-webkit-user-drag: none;
         user-select: none;
@@ -362,14 +417,10 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
   </div></p></div>
     
     
-      <div class="tech-slideshow">
-        <div class="mover-1"></div>
-        <div class="mover-2"></div>
-      </div>
      
    
     </div>
-
+<hr>
     
    <div class="seethrough"><div id="contact"></div>
     <footer>
