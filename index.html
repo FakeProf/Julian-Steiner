@@ -18,7 +18,12 @@
     <span id="ring"></span>
   </div>
 
- 
+ <!--
+  weiterer Inhalt der Website
+
+  -Zertifikate
+  -Service oder auch was ich anbieten könnte 
+ -->
 
 
 
@@ -220,6 +225,48 @@ user-select: none;
 </div>
 
 <div class="section">
+
+  
+
+  <div class="container12">
+    <ul class="slides">
+      <li id="slide1"><img src="ich im see.jpeg" alt="" /></li>
+      <li id="slide2"><img src="blätter.jpeg" alt="" /></li>
+      <li id="slide3"><img src="spiegelung.jpeg" alt="" /></li>
+      <li id="slide4"><img src="mic.jpeg" alt="" /></li>
+      <li id="slide5"><img src="blätter.jpeg" alt="" /></li>
+       <li id="slide6"><img src="blätter.jpeg" alt="" /></li>
+        <li id="slide7"><img src="blätter.jpeg" alt="" /></li>
+    </ul>
+  
+    <ul class="thumbnails">
+      <li>
+        <a href="#slide1"><img src="ich im see.jpeg" /></a>
+      </li>
+      <li>
+        <a href="#slide2"><img src="blätter.jpeg" /></a>
+      </li>
+      <li>
+        <a href="#slide3"><img src="spiegelung.jpeg" /></a>
+      </li>
+      <li>
+        <a href="#slide4"><img src="mic.jpeg" /></a>
+      </li>
+     <li> 
+      <a href="#slide5"><img src="blätter.jpeg" /></a> 
+     </li>
+      <li> 
+      <a href="#slide6"><img src="blätter.jpeg" /></a> 
+     </li>
+      <li> 
+      <a href="#slide7"><img src="blätter.jpeg" /></a> 
+     </li>
+    
+    </ul>
+  </div>
+
+ 
+  <!--
   <div id="pillar">
 
     <div class="row">
@@ -292,11 +339,11 @@ user-select: none;
   </div>
 
       
-     
-      
-      
-  </div>
+  
+  
+</div>
 
+-->
 </div>
 <div id="about">
 </div>
@@ -415,13 +462,71 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
         
   
   </div></p></div>
-    
-    
-     
+
+  
+<div id="game" onclick="jump()" >
+  <div id="character"></div>
+  <div id="block"></div>
+</div>
+
+<script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var character = document.getElementById("character");
+var block = document.getElementById("block");
+var counter=0;
+function jump(){
+  if(character.classList == "animate"){return}
+  character.classList.add("animate");
+  setTimeout(function(){
+    character.classList.remove("animate");
+  },300);
+  
+  block.style.animation = "block 1s infinite linear";
+
+    block.classList.add("animates");
+  
+}
+var checkDead = setInterval(function() {
+    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
+        block.style.animation = "none";
+        alert("Game Over. score: "+Math.floor(counter/100));
+        counter=0;
+      }else{
+        counter++;
+        document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+      }
+    }, 10);
+
+</script>
+
+
+
+
+<div class="circle"></div>
+
+<div class="counter"></div>
    
     </div>
-<hr>
-    
+
+
+
+    <hr>
+
    <div class="seethrough"><div id="contact"></div>
     <footer>
       
@@ -436,7 +541,7 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
       <a class="mail" href="mailto:j.b.steiner.2004@gmail.com">
           j.b.steiner.2004@gmail.com</a>
       
-       <br><br>
+       <br><br><br> 
        <form action="index.html" method="post">
        <div class="input-group">
           <input required="" type="text" name="text" autocomplete="off" class="input">
