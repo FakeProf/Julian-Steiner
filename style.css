@@ -2373,7 +2373,7 @@ margin-bottom: 20px;
 
   margin-top: 50px;
   margin-bottom: 50px;
-  margin: 0 6% 0 6%;
+  margin: 0 3% 0 8%;
 
   transition: all 0.5s ease-in-out;
 }
@@ -2386,6 +2386,10 @@ margin-bottom: 20px;
 #skills3:hover{ transition: all .5s ease-in-out;
   transform: scale(1.6);
 }
+
+
+
+
 @media screen and (min-width: 800px)and (max-width:1600px){
   
 
@@ -2589,9 +2593,14 @@ margin-bottom: 20px;
     @keyframes thisAnimation{ 
       to {
      visibility: visible;
+      } 
       }
+
+      .waviy:hover{
        
+        transform: scale(1.1);
       }
+     
     .waviy span {
    
       position: relative;
@@ -5078,7 +5087,7 @@ margin-bottom: 20px;
   video{
     width: auto;
     height: 32%;
-    margin: 5% 0% 0 0%;
+    margin: 4% 0% 0 0%;
   }
   #pillar {display: block; margin: 100px auto; width: 300px; transform: translateX(-200px); 
     perspective: 1900px; 
@@ -6219,10 +6228,18 @@ margin-bottom: 20px;
   
   .h22:hover .spans:nth-child(5) {
     
-    transform:  scalex(1) translateY(25%)translatex(-40%)  scaleY(1);
+    transform:  scalex(1) translateY(35%)translatex(-22.5%)  scaleY(1);
     font-size: 1.2rem;
+ 
+    background: white;
+    width: fit-content;
+  }
+ 
+    #splinedesign{
+      visibility: hidden;
     }
   }
+
   
   
   
