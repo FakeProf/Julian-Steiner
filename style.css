@@ -2375,7 +2375,7 @@ margin-bottom: 20px;
   margin-bottom: 50px;
   margin: 0 3% 0 8%;
 
-  transition: all 0.5s ease-in-out;
+  transition: all 0.05s ease-in-out;
 }
 #skills1:hover{ transition: all .5s ease-in-out;
   transform: scale(1.6);
@@ -2598,7 +2598,7 @@ margin-bottom: 20px;
 
       .waviy:hover{
        
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
      
     .waviy span {
