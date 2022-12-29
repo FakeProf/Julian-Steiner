@@ -1,5 +1,37 @@
 @media screen and (min-width: 1600px){
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;
   
+  animation: cookieAnimation 10000000000000s ease-in 8.2s ;
+visibility: hidden;
+  }
+  
+  @keyframes cookieAnimation{ 
+    to {
+   visibility: visible;
+    }
+     
+    }
+  .accept-cookies-button {
+    background-color: #000000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .accept-cookies-button:hover {
+    background-color: #000000;
+  }
+
 /**/
  header{
     margin: 0;
@@ -2392,6 +2424,41 @@ margin-bottom: 20px;
 
 @media screen and (min-width: 800px)and (max-width:1600px){
   
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;
+  
+  animation: cookieAnimation 10000000000000s ease-in 8.2s ;
+visibility: hidden;
+  }
+  
+  @keyframes cookieAnimation{ 
+    to {
+   visibility: visible;
+    }
+     
+    }
+  .accept-cookies-button {
+    background-color: #000000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .accept-cookies-button:hover {
+    background-color: #000000;
+  }
+
+
+
 
   /**/
    header{
@@ -4329,6 +4396,38 @@ margin-bottom: 20px;
 /*----------------------new-ratio-------------------------------*/
 
 @media screen and (max-width:800px){
+   .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;
+  
+  animation: cookieAnimation 10000000000000s ease-in 8.2s ;
+visibility: hidden;
+  }
+  
+  @keyframes cookieAnimation{ 
+    to {
+   visibility: visible;
+    }
+     
+    }
+  .accept-cookies-button {
+    background-color: #000000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .accept-cookies-button:hover {
+    background-color: #000000;
+  }
   
 
   /**/
@@ -6228,11 +6327,13 @@ margin-bottom: 20px;
   
   .h22:hover .spans:nth-child(5) {
     
-    transform:  scalex(1) translateY(35%)translatex(-22.5%)  scaleY(1);
+    transform:  scalex(1) translateY(25%)translatex(-23.5%)  scaleY(1);
     font-size: 1.2rem;
- 
+    letter-spacing: 0.6em;
     background: white;
     width: fit-content;
+    padding: 10px 10px;
+    
   }
  
     #splinedesign{
