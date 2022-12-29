@@ -12,18 +12,31 @@
    <link rel="icon" href="see sonnenuntergang.jpeg" type="image/png" sizes="16x16">
    <link rel="icon" href="see sonnenuntergang.jpeg" type="image/png" sizes="32x32">
    <link rel="apple-touch-icon" href="see sonnenuntergang.jpeg" sizes="180x180">
-   <link rel="manifest" href="manifest.webmanifest">
+   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <div class="cookie-banner">
+    This website uses cookies to improve your experience. By continuing to use our site, you agree to our use of cookies.
+    <button class="accept-cookies-button">OK</button>
+  </div>
+  <script>
+    const acceptCookiesButton = document.querySelector('.accept-cookies-button');
+acceptCookiesButton.addEventListener('click', function() {
+  const cookieBanner = document.querySelector('.cookie-banner');
+  cookieBanner.style.display = 'none';
+});
+  </script>
   <div class="ring">Loading
     <span id="ring"></span>
   </div>
 
+
+
  <!--
   weiterer Inhalt der Website
 
-  -Zertifikate
-  -Service oder auch was ich anbieten könnte 
+  
+  -Services
 
 -Video von mir
 -und der Sound über audio einzeln
@@ -101,6 +114,7 @@
       </ul>
     </div>
   </nav>
+  
   
   
   <!-- Menu Icon -->
@@ -546,12 +560,12 @@ function jump(){
           </form>
       </div>
       <h4 style="color: aliceblue; text-decoration: underline;font-size: 1em;transform: translateY(-30%);">
-       <a href="https://juliansteiner.me/impressum" > Impressum</a>
+       <a href="https://juliansteiner.me/impressum" > Impressum<br>   Cookies </a>
       </h4>
         
       <iframe id="splinedesign" src='https://my.spline.design/untitled-fea94203c6ff161a61d8015733e92155/'  frameborder='0'  width="30%" height="600px"style="background-color:transparent"></iframe>
      
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.  
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a>.  
       </footer>
    </div>
  
