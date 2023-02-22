@@ -16,16 +16,16 @@
 </head>
 <body>
   <div class="cookie-banner">
-    This website uses cookies to improve your experience. By continuing to use our site, you agree to our use of cookies.
+    Diese Webseite nutzt Cookies um die Nutererfahrung zu verbessern. Indem Sie weiter auf der Webseite verweilen stimmen sie der Nutzung von Cookies zu.
     <button class="accept-cookies-button">OK</button>
   </div>
   <script>
     const acceptCookiesButton = document.querySelector('.accept-cookies-button');
-acceptCookiesButton.addEventListener('click', function() {
-  const cookieBanner = document.querySelector('.cookie-banner');
-  cookieBanner.style.display = 'none';
-});
-  </script>
+    acceptCookiesButton.addEventListener('click', function() {
+      const cookieBanner = document.querySelector('.cookie-banner');
+      cookieBanner.style.display = 'none';
+    });
+    </script>
   <div class="ring">Loading
     <span id="ring"></span>
   </div>
@@ -33,18 +33,52 @@ acceptCookiesButton.addEventListener('click', function() {
 
 
  <!--
-  weiterer Inhalt der Website
-
-  
-  -Services
+   weiterer Inhalt der Website
+   
+   
+   -Services
 
 -Video von mir
 -und der Sound über audio einzeln
-
+-Impressum
  -->
+<!--
 
+  <div class="window">
+    <div class="header">
+      <div class="burger-container">
+          <div id="burger">
+              <div class="bar topBar"></div>
+              <div class="bar btmBar"></div>
+          </div>
+      </div>
+      <div class="icon icon-apple"></div>
+      <ul class="menu">
+          
+          <li class="menu-item">
+              <a href="#">iPad</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">iPhone</a>
+          </li>
+          <li class="menu-item">
+              <a href="#">Watch</a>
+            </li>
+            
+          </ul>
+          <div class="shop icon icon-bag"></div>
+        </div>
+ </div>
+ <script>(function(){
+  var burger = document.querySelector('.burger-container'),
+      header = document.querySelector('.header');
+  
+  burger.onclick = function() {
+    header.classList.toggle('menu-opened');
+  }
+}());</script>
 
-
+-->
 
 
  
@@ -65,16 +99,134 @@ acceptCookiesButton.addEventListener('click', function() {
           <span class="spans">  Webdevelopment</span>
         </h2></a>
       </div>
+
+      <!-- Navbar Menu -->
+     
+      <label class="hamburger-menu">
+        <input type="checkbox" />
+      </label>
+      <aside class="sidebar">
+        <nav>
+          <div>This</div>
+          <div>Is</div>
+          <div>The</div>
+          <div>Sidebar</div>
+        </nav>
+      </aside>
+   
+      <style>
+        @media screen and (min-width: 668px) {
+          .sidebar {
+            display: none;
+           
+          }
+          .hamburger-menu:has(input:checked) {
+          color: white;
+          }
+        }
+      
+        @media screen and (max-width: 768px) {
+        
+        :root {
+          --bar-width: 60px;
+          --bar-height: 8px;
+          --hamburger-gap: 6px;
+          --foreground: #333;
+          --background: white;
+          --hamburger-margin: 8px;
+          --animation-timing: 200ms ease-in-out;
+          --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+        }}
+        
+        .hamburger-menu {
+          --x-width: calc(var(--hamburger-height) * 1.41421356237);
+        
+          display: flex;
+          flex-direction: column;
+          gap: var(--hamburger-gap);
+          width: max-content;
+          position: fixed;
+          top: var(--hamburger-margin);
+          left: var(--hamburger-margin);
+          z-index: 2000000;
+          cursor: pointer;
+        }
+        
+        .hamburger-menu:has(input:checked) {
+          --background: #333;
+        }
+        
+        .hamburger-menu:has(input:focus-visible)::before,
+        .hamburger-menu:has(input:focus-visible)::after,
+        .hamburger-menu input:focus-visible {
+          border: 1px solid var(--background);
+          box-shadow: 0 0 0 1px var(--foreground);
+        }
+        
+        .hamburger-menu::before,
+        .hamburger-menu::after,
+        .hamburger-menu input {
+          content: "";
+          width: var(--bar-width);
+          height: var(--bar-height);
+          background-color: var(--foreground);
+          border-radius: 9999px;
+          transform-origin: left center;
+          transition: opacity var(--animation-timing), width var(--animation-timing),
+            rotate var(--animation-timing), translate var(--animation-timing),
+            background-color var(--animation-timing);
+        }
+        
+        .hamburger-menu input {
+          appearance: none;
+          padding: 0;
+          margin: 0;
+          outline: none;
+          pointer-events: none;
+        }
+        
+        .hamburger-menu:has(input:checked)::before {
+          rotate: 45deg;
+          width: var(--x-width);
+          translate: 0 calc(var(--bar-height) / -2);
+        }
+        
+        .hamburger-menu:has(input:checked)::after {
+          rotate: -45deg;
+          width: var(--x-width);
+          translate: 0 calc(var(--bar-height) / 2);
+        }
+        
+        .hamburger-menu input:checked {
+          opacity: 0;
+          width: 0;
+        }
+        
+        .sidebar {
+          transition: translate var(--animation-timing);
+          translate: -100%;
+          padding: 0.5rem 1rem;
+          padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+          background-color: var(--foreground);
+          color: var(--background);
+          max-width: 10rem;
+          min-height: 100vh;
+         
+        }
+        
+        .hamburger-menu:has(input:checked) + .sidebar {
+          translate: 0;
+        }</style>
       <button type="button" onclick="aud_play_pause()" id="play" >
      <!-- <svg version="1.1" id="plays" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="50px" width="50px"
-    viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-    <path class="stroke-solid" fill="none" stroke="#ddbe72"  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
-    C97.3,23.7,75.7,2.3,49.9,2.5"/>
-    <path class="icons" fill="#ddbe72" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
-    
-    
-  </svg>-->           
-  <div class="center">
+      viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+      <path class="stroke-solid" fill="none" stroke="#ddbe72"  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+      C97.3,23.7,75.7,2.3,49.9,2.5"/>
+      <path class="icons" fill="#ddbe72" d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"/>
+      
+      
+    </svg>-->           
+    <div class="center">
     <div id="control">
       <div class="border"></div>
       <div class="play"></div>
@@ -83,7 +235,7 @@ acceptCookiesButton.addEventListener('click', function() {
 </button> 
 <script>var playButton = document.getElementById('control');
 
-  playButton.addEventListener('click', e => {
+playButton.addEventListener('click', e => {
     e.preventDefault();
     playButton.classList.toggle('is--playing');
   });</script>
@@ -108,9 +260,9 @@ acceptCookiesButton.addEventListener('click', function() {
       <!-- Navbar Links -->
       <ul id="menu">
         <li><a href="#home">Home</a></li><!--
-     --><li><a href="#services">Services</a></li><!--
-     --><li><a href="#about">About</a></li><!--
-     --><li><a href="#contact">Contact</a></li>
+     --><li><a href="#services">Service</a></li><!--
+     --><li><a href="#about">Über mich</a></li><!--
+     --><li><a href="#contact">Kontakt</a></li>
       </ul>
     </div>
   </nav>
@@ -159,9 +311,48 @@ acceptCookiesButton.addEventListener('click', function() {
       }
   });
   </script>
+
   
   
-  
+<!-- mobile menu
+  <div class="window"></div>
+  <div class="header"></div>
+  <div Class="burger-container"> </div>
+            <div id="burger"></div>
+                <div class="bar.topBar"></div>
+                <div class="bar.btmBar"> </div>
+     
+        <div class="icon.icon-apple"></div>
+    
+        <ul class="menu">
+          <li class.menu-item>
+          <a href="#">
+            Mac
+          </a>
+          </li>
+          <li class.menu-item>
+            <a href="#">
+              Mac
+            </a>
+          </li> <li class.menu-item>
+            <a href="#">
+                Mac
+              </a>
+              </li> <li class.menu-item>
+                <a href="#">
+                  Mac
+                </a>
+                </li> 
+            
+        </ul>
+        <div class="shop.icon.icon-bag"></div>
+        
+      --> 
+    <div class="content"></div>  
+        
+
+
+  <!-- Home Section -->
   
   
   <div id="home">
@@ -246,8 +437,39 @@ user-select: none;
 </div>
 
 <div class="section">
-
+<div class="slider">
+  <div class="rotator">
+    <div class="items">
+      <img src="ich im see.jpeg">
+    </div>
+    <div class="items">
+      <img src="blätter.jpeg">
+    </div>
+    <div class="items">
+      <img src="spiegelung.jpeg">
+    </div>
+    <div class="items">
+      <img src="mic.jpeg">
+    </div>
+    <div class="items">
+      <img src="VormPc2.jpg">
+    </div>
+    <div class="items">
+      <img src="bildschirm.jpeg">
+    </div>
+    <div class="items">
+      <img src="tastatur.jpeg">
+    </div>
+    <div class="items">
+      <img src="maus 1.jpeg">
+    </div>
+    <div class="items">
+      <img src="uhr.jpeg">
+    </div>
+  </div>
+</div>
   
+<!--
 
   <div class="container12">
     <ul class="slides">
@@ -273,18 +495,19 @@ user-select: none;
       <li>
         <a href="#slide4"><img src="mic.jpeg" /></a>
       </li>
-     <li> 
-      <a href="#slide5"><img src="processed-b2bb4333-2453-42c5-9689-3e331f56cefe_T1qnTjhd.jpeg" width="71.1%"  /></a> 
-     </li>
       <li> 
-      <a href="#slide6"><img src="processed-1a4f068d-e3c3-41eb-ae6d-7fd8e1cecf0c_2gEhz6OY.jpeg" width="71.1%"/></a> 
-     </li>
+        <a href="#slide5"><img src="processed-b2bb4333-2453-42c5-9689-3e331f56cefe_T1qnTjhd.jpeg" width="71.1%"  /></a> 
+      </li>
       <li> 
-      <a href="#slide7"><img src="straße.jpeg" /></a> 
-     </li>
-    
+        <a href="#slide6"><img src="processed-1a4f068d-e3c3-41eb-ae6d-7fd8e1cecf0c_2gEhz6OY.jpeg" width="71.1%"/></a> 
+      </li>
+      <li> 
+        <a href="#slide7"><img src="straße.jpeg" /></a> 
+      </li>
+      
     </ul>
   </div>
+-->
 
  
   <!--
@@ -378,7 +601,7 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
     <div data-aos="zoom-in"  data-aos-duration="1000000"><h2 class="h2">Über mich</h2></div>
    
     <figure class="snip1213">
-     <div class="textaufbild"> website by Julian Steiner 
+     <div class="textaufbild">website by Julian Steiner 
       <br><br><br><h6>Hover me</h6>
      </div>
       <img  class="bild1" src="pexels-gradienta-6985001.jpg" width="500" height="300" />
@@ -402,79 +625,82 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
  
   
     <div class="sections">    
-    <div data-aos="fade-up"
-    data-aos-anchor-placement="bottom-bottom"class="text2">
-    <h3>Ich probiere so gut es geht Erfahrungen zu sammeln indem ich z.B. für Freunde kleine Projekt Websites erstelle</h3></div>
+    <div class="text2">
+    <h3>Fortschritte erziehlte ich durch das gucken von Tutorials und durchs umsetzen, des jeweiligen codes.</h3></div>
    
     <figure class="snip12134">
       <img  class="bild2" src="Screenshot (16).png" width="500" height="300" />
       <figcaption>
         <h3>Screenshot by Julian Steiner</h3>
-        <p>CSS from https://juliansteiner.me </p>
-        <a href="view-source:file:///C:/Users/Julian/OneDrive/Code/another%20me%20website%20try/index.html#about" class="read-more">Read More</a>
+        <p>CSS von https://juliansteiner.de </p>
+        <a href="https://juliansteiner.de/style.css" class="read-more">Read More</a>
       </figcaption>
     </figure>
      
-   
+    
     <div class="tech-slideshow">
       <div class="mover-1"></div>
       <div class="mover-2"></div>
     </div>
-
-  <div id="üskills" > Mein bisheriges Wissen über HTML, CSS etc. erlangte ich durch Sololearn, CS50 und durch Youtube </div>
+    <h2 class="h2" style="font-family: 'Raleway', Arial, sans-serif;">Das Schicksal, existiert es wirklich?</h2><br>
+    <div data-aos="fade-up">
+      <p class="text3">
+        <div class="essay" style="font-family: 'Raleway', Arial, sans-serif;">
+          <h2></h2>
+        <div>
+          <input type="checkbox" class="read-more-state" id="post-1" />
+        
+          <p class="read-more-wrap">  Was ist eigentlich Schicksal? Schicksal ist eine Art vorbestimmter Lebensweg welcher von der Sichtweise abhängend schon immer vorbestimmt und klar war. Es kann beeinflussen, dass man Entscheidungen genau so trifft wie es das Schicksal will, so das man irgendwann im Leben zu dem Punkt kommt wo das Schicksal einen hingeschickt hat. Doch es hängt immer von der Sichtweise jedes Menschen ab in wie weit man denkt das das Schicksal existiert. <span class="read-more-target"> Es gibt viele Menschen, die gar nicht erst glauben das das Schicksal existiert und auch welche die nur in extremen Glücksfällen daran glauben. Es gibt auch noch die extremere  Variante in der manche Menschen denken, dass das Leben komplett vorbestimmt ist und wirklich JEDE Entscheidung bereits vom Schicksal entschieden wurde. Und wenn man eine Entscheidung nicht fällt um von dem Schicksal abzuweichen kann es sehr gut sein das dieser Teil bereits zum Schicksal gehört. Kann man wirklich an sein oder das Schicksal glauben und vertrauen? Es gibt immer wieder Momente im Leben in denen man fast sogar glauben muss das das Schicksal existiert, da man z.B. auf einmal sehr viel Glück hat oder auch Pech und man könnte sich denken, dass das eigene Schicksal es so für einen will und es so bestimmt ist. Doch es ist wirklich jedem überlassen ob man an das Schicksal glaubt oder nicht. Dies kann auch viel mit dem Glauben zu tun haben, da Gläubige sozusagen auf etwas warten und das Schicksal könnte dies erfüllen, da eine Tat Gottes auch als Schicksal gewertet werden könnte. Glauben und Schicksal ähneln sich eigentlich sogar sehr, da beide den weiteren Lebensweg beeinflussen. Man ist als Mensch meist nur richtig gläubig, wenn man bereits Geschehnisse im Leben hatte, in welchen man sehr viel Glück hatte und daran Glauben muss und wenn dies nicht der Fall ist besteht der Glauben nur aus einer dünnen geistigen Ebene. Das Wort Schicksal wird z.B. verwendet wenn man mit etwas abschließt und die Folgen in Kauf nimmt und sich sozusagen seinem Schicksal fügt oder sein Schicksal besiegelt. Mann kann es auch verwenden indem man es mit Glück in Bezug nimmt indem man sein Schicksal herausfordert und somit darauf hofft, dass das Schicksal einem Glück bringt. Im Gegenzug zu den Menschen die an das Schicksal glauben stehen die die Fakten in den Mittelpunkt des Lebens stellen und sich bewusst sind das nicht das Schicksal einen an diese Stelle im Leben befördert hat, sondern die eigenen Taten und harte Arbeit. 
+    Ich persönlich glaube nicht an das Schicksal welches einen das ganze Leben über begleitet und führt, sondern an einige Zufälle, welche in dem Moment eine Gabe des Schicksals sind aber auch wieder abebben. Es hängt auch davon ab wie viele Prägende Erfahrungen der Mensch in seinem Leben gemacht hat, wodurch auch das alter eine Rolle spielt. Schicksal kann man auch mit dem Wort Zufall in Verbindung bringen, da etwas beim Schicksal genau wie beim Zufall plötzlich und unvorbereitet eintrifft.
+    </span></p>
+          
+          <label for="post-1" class="read-more-trigger"> 
+             <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+      
+    
+    </div></p></div>
+    <div data-aos="fade-up-left">
+            <img class="bild3" src="VormPc2.jpg" style="-webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            background-color: transparent;
+            width:50%;
+            height:auto;
+            margin-left: 24.5%;
+            " />
+          </div>
+<br>
+  <div id="üskills" style="margin-top: 3%;"> Den großteil, meines bisherigen Wissens über die Webentwicklung erlangte ich durch Sololearn, CS50 und durch Youtube<!--Für CS50 habe ich keine Zertifikate vorzuweisen, da ich nicht die Premium Version der Kurse besuchte.--> </div>
 <div id="skills">
   <img id="skills1" src="Html.png"style="width:80%; height:auto">
   <img id="skills2" src="CSS.png"style="width:80%; height:auto" >
   <img id="skills3" src="Responsive webdesign.png" style="width:80%; height:auto">
+  <img id="skills3" src="webdevfundamentals.png" style="width:80%; height:auto">
 </div>
 
 
 
 
 
-<div data-aos="fade-up-left">
-  
-        <img class="bild3" src="VormPc2.jpg" style="-webkit-user-drag: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        background-color: transparent;
-        width:50%;
-        height:auto;
-        margin-left: 24.5%;
-        " />
-      </div>
       
-      <h2 class="h2" style="font-family: 'Raleway', Arial, sans-serif;">Das Schicksal, existiert es wirklich?</h2><br>
-      <div data-aos="fade-up">
-        <p class="text3">
-          <div class="essay" style="font-family: 'Raleway', Arial, sans-serif;">
-            <h2></h2>
-          <div>
-            <input type="checkbox" class="read-more-state" id="post-1" />
-          
-            <p class="read-more-wrap">  Was ist eigentlich Schicksal? Schicksal ist eine Art vorbestimmter Lebensweg welcher von der Sichtweise abhängend schon immer vorbestimmt und klar war. Es kann beeinflussen, dass man Entscheidungen genau so trifft wie es das Schicksal will, so das man irgendwann im Leben zu dem Punkt kommt wo das Schicksal einen hingeschickt hat. Doch es hängt immer von der Sichtweise jedes Menschen ab in wie weit man denkt das das Schicksal existiert. <span class="read-more-target"> Es gibt viele Menschen, die gar nicht erst glauben das das Schicksal existiert und auch welche die nur in extremen Glücksfällen daran glauben. Es gibt auch noch die extremere  Variante in der manche Menschen denken, dass das Leben komplett vorbestimmt ist und wirklich JEDE Entscheidung bereits vom Schicksal entschieden wurde. Und wenn man eine Entscheidung nicht fällt um von dem Schicksal abzuweichen kann es sehr gut sein das dieser Teil bereits zum Schicksal gehört. Kann man wirklich an sein oder das Schicksal glauben und vertrauen? Es gibt immer wieder Momente im Leben in denen man fast sogar glauben muss das das Schicksal existiert, da man z.B. auf einmal sehr viel Glück hat oder auch Pech und man könnte sich denken, dass das eigene Schicksal es so für einen will und es so bestimmt ist. Doch es ist wirklich jedem überlassen ob man an das Schicksal glaubt oder nicht. Dies kann auch viel mit dem Glauben zu tun haben, da Gläubige sozusagen auf etwas warten und das Schicksal könnte dies erfüllen, da eine Tat Gottes auch als Schicksal gewertet werden könnte. Glauben und Schicksal ähneln sich eigentlich sogar sehr, da beide den weiteren Lebensweg beeinflussen. Man ist als Mensch meist nur richtig gläubig, wenn man bereits Geschehnisse im Leben hatte, in welchen man sehr viel Glück hatte und daran Glauben muss und wenn dies nicht der Fall ist besteht der Glauben nur aus einer dünnen geistigen Ebene. Das Wort Schicksal wird z.B. verwendet wenn man mit etwas abschließt und die Folgen in Kauf nimmt und sich sozusagen seinem Schicksal fügt oder sein Schicksal besiegelt. Mann kann es auch verwenden indem man es mit Glück in Bezug nimmt indem man sein Schicksal herausfordert und somit darauf hofft, dass das Schicksal einem Glück bringt. Im Gegenzug zu den Menschen die an das Schicksal glauben stehen die die Fakten in den Mittelpunkt des Lebens stellen und sich bewusst sind das nicht das Schicksal einen an diese Stelle im Leben befördert hat, sondern die eigenen Taten und harte Arbeit. 
-    Ich persönlich glaube nicht an das Schicksal welches einen das ganze Leben über begleitet und führt, sondern an einige Zufälle, welche in dem Moment eine Gabe des Schicksals sind aber auch wieder abebben. Es hängt auch davon ab wie viele Prägende Erfahrungen der Mensch in seinem Leben gemacht hat, wodurch auch das alter eine Rolle spielt. Schicksal kann man auch mit dem Wort Zufall in Verbindung bringen, da etwas beim Schicksal genau wie beim Zufall plötzlich und unvorbereitet eintrifft.
-  </span></p>
-            
-            <label for="post-1" class="read-more-trigger"> 
-               <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
-          
-        
-  
-  </div></p></div>
 
 
-  
-  <div id="game" onclick="jump()" >
-    <div id="character"></div>
-    <div id="block"></div>
+
+<h3  style="margin-top: 5%;text-align: center;"  >
+
+  Kleines mini game
+</h3>
+  <div id="game" onclick="jump()">
+    <div id="character">:)</div>
+    <div id="block">:(</div>
   </div>
   
 <script> 
@@ -560,7 +786,7 @@ function jump(){
           </form>
       </div>
       <h4 style="color: aliceblue; text-decoration: underline;font-size: 1em;transform: translateY(-30%);">
-       <a href="https://juliansteiner.me/impressum" > Impressum<br>   Cookies </a>
+       <a href="Impressum.html"style="display:block;"> Impressum</a> <a href="Cookies.html">  Cookies </a>
       </h4>
         
       <iframe id="splinedesign" src='https://my.spline.design/untitled-fea94203c6ff161a61d8015733e92155/'  frameborder='0'  width="30%" height="600px"style="background-color:transparent"></iframe>
