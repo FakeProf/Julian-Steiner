@@ -1,4 +1,91 @@
-@media screen and (min-width: 1600px){
+  .slider{
+    scale: 1.2;
+    position: relative;
+    width:350px;
+    margin: 50px auto;
+    perspective: 1000px;
+    padding-top:120px;
+    z-index: 10000;
+  }
+  .rotator{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 55%;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: rotor 29s linear infinite;
+    z-index: 10000;
+  }
+  .items{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #0000;
+    border-radius: 17px;
+    z-index: 10000;
+  }
+  
+  .items img{
+    height: 100%;
+    width: 100%;
+    transition: all 3s ease;
+  }
+
+  .items:hover img{
+    transform: scale(4.1);
+  }
+ .items:hover .container12 {
+display: none;
+  }
+
+  @keyframes rotor {
+    from {
+      transform: rotateY(0deg);
+    }
+    to{
+      transform: rotateY(360deg);
+    }
+  }
+
+  .items:first-child {
+    transform: rotateY(calc(40deg)) translateZ(300px);
+  }
+  .items:nth-child(2) {
+    transform: rotateY(calc(80deg)) translateZ(300px);
+  }
+  .items:nth-child(3) {
+    transform: rotateY(calc(120deg)) translateZ(300px);
+  }
+  .items:nth-child(4) {
+    transform: rotateY(calc(160deg)) translateZ(300px);
+  }
+  .items:nth-child(5) {
+    transform: rotateY(calc(200deg)) translateZ(300px);
+  }
+  .items:nth-child(6) {
+    transform: rotateY(calc(240deg)) translateZ(300px);
+  }
+  .items:nth-child(7) {
+    transform: rotateY(calc(280deg)) translateZ(300px);
+  }
+  .items:nth-child(8) {
+    transform: rotateY(calc(320deg)) translateZ(300px);
+  }
+  .items:nth-child(9) {
+    transform: rotateY(calc(360deg)) translateZ(300px);
+  }
+
+  .rotator:hover{
+    animation-play-state: paused;
+  }
+  
+  
+  
+  
+  @media screen and (min-width: 1600px){
   .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -4396,7 +4483,108 @@ visibility: hidden;
 /*----------------------new-ratio-------------------------------*/
 
 @media screen and (max-width:800px){
-   .cookie-banner {
+ 
+
+
+
+  
+ 
+  
+  .window {
+    position: relative;
+    display: block;
+    width: 360px;
+    height: 567px;
+    margin: 100px auto 0;
+    box-shadow: 0 0 65px 15px rgba(#000, 0.2);
+    overflow: hidden;
+    border-radius: 3px;
+    
+  }
+  
+  .window .header {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: rgba(#000,0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-out, background 1s ease-out;
+    transition-delay: 0.2s;
+    z-index: 1;
+  }
+  
+  .window .header .burger-container {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .window .header .burger-container #burger {
+    width: 18px;
+    height: 8px;
+    position: relative;
+    display: block;
+    margin: -4px auto 0;
+    top: 50%;
+  }
+  
+  .window .header .burger-container #burger .bar {
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: relative;
+   
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition-delay: 0s;
+  }
+  
+  .window .header .burger-container #burger .bar.topBar {
+    transform: translateY(0px) rotate(0deg);
+  }
+  
+  .window .header .burger-container #burger .bar.btmBar {
+    transform: translateY(6px) rotate(0deg);
+  }
+  
+  .window .header .icon {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    
+    font-size: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .window .header .icon.icon-bag {
+    right: 0;
+    top: 0;
+    left: auto;
+    transform: translateX(0px);
+    transition: transform 0.5s cubic-bezier(0.4, 0.01)}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
