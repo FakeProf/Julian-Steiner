@@ -91,7 +91,7 @@
       <!-- Navbar Logo -->
       <div class="logo">
         <!-- Logo Placeholder for Inlustration -->
-        <a href="#home"><i class="fa fa-light fa-code "></i>  <h2 class="h22">
+        <a href="#home"><i class="fa fa-light fa-code" id="codelogo"></i>  <h2 class="h22">
           <span class="spans">   Julian Steiner</span>
           <span class="spans">  Julian Steiner</span>
           <span class="spans">Julian Steiner</span>
@@ -107,14 +107,27 @@
       </label>
       <aside class="sidebar">
         <nav>
-          <div>This</div>
-          <div>Is</div>
-          <div>The</div>
-          <div>Sidebar</div>
+          <a href="#home">HOME</a>
+          <a href="#services">SERVICE</a>
+          <a href="#about">ÜBER MICH</a>
+          <a href="#contact">KONTAKT</a>
         </nav>
       </aside>
    
       <style>
+        .sidebar a {
+          display: block;
+      
+          text-decoration: none;
+          
+       
+        }
+@media  screen and (max-width:668px) {
+  
+  #codelogo{
+   display: none;
+     }
+}
         @media screen and (min-width: 668px) {
           .sidebar {
             display: none;
@@ -133,14 +146,13 @@
           --hamburger-gap: 6px;
           --foreground: #333;
           --background: white;
-          --hamburger-margin: 8px;
+          --hamburger-margin: 10px;
           --animation-timing: 200ms ease-in-out;
           --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
         }}
         
         .hamburger-menu {
           --x-width: calc(var(--hamburger-height) * 1.41421356237);
-        
           display: flex;
           flex-direction: column;
           gap: var(--hamburger-gap);
@@ -189,22 +201,25 @@
           rotate: 45deg;
           width: var(--x-width);
           translate: 0 calc(var(--bar-height) / -2);
+      background-color: white;
         }
         
         .hamburger-menu:has(input:checked)::after {
           rotate: -45deg;
           width: var(--x-width);
           translate: 0 calc(var(--bar-height) / 2);
+    background-color: white;
         }
         
         .hamburger-menu input:checked {
           opacity: 0;
           width: 0;
+          
         }
         
         .sidebar {
           transition: translate var(--animation-timing);
-          translate: -100%;
+          translate: -200%;
           padding: 0.5rem 1rem;
           padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
           background-color: var(--foreground);
@@ -215,7 +230,7 @@
         }
         
         .hamburger-menu:has(input:checked) + .sidebar {
-          translate: 0;
+          translate: -20%;
         }</style>
       <button type="button" onclick="aud_play_pause()" id="play" >
      <!-- <svg version="1.1" id="plays" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="50px" width="50px"
