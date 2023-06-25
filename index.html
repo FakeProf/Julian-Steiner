@@ -8,15 +8,17 @@
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="inde">
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <meta name="description" content="Website über mich/ Julian Steiner, Schüler, upcoming Webdeveloper" />
-   <link rel="icon" href="see sonnenuntergang.jpeg" type="image/png" sizes="16x16">
-   <link rel="icon" href="see sonnenuntergang.jpeg" type="image/png" sizes="32x32">
-   <link rel="apple-touch-icon" href="see sonnenuntergang.jpeg" sizes="180x180">
+   <meta name="description" content="Website über mich/ Julian Steiner, Webentwickler" />
+   <meta name="keywords" content="Webdesign, Webentwicklung, Hannover, Webdevelopment, Julian Steiner"/>
+   <link rel="icon" href="JS Logo.jpg" type="image/png" sizes="16x16">
+   <link rel="icon" href="JS Logo.jpg" type="image/png" sizes="32x32">
+   <link rel="apple-touch-icon" href="JS Logo.jpg" sizes="180x180">
    <link rel="manifest" href="manifest.json">
+   <!--<a href="https://www.vecteezy.com/free-vector/j">J Vectors by Vecteezy /Credit for the Logo</a>-->
 </head>
 <body>
   <div class="cookie-banner">
-    Diese Webseite nutzt Cookies um die Nutererfahrung zu verbessern. Indem Sie weiter auf der Webseite verweilen stimmen sie der Nutzung von Cookies zu.
+    Diese Webseite nutzt Cookies um die Nutererfahrung zu verbessern. Indem Sie weiter auf der Webseite verweilen stimmen sie der<a href="Cookies.html" style="text-decoration:underline ;"> Nutzung von Cookies zu</a>.
     <button class="accept-cookies-button">OK</button>
   </div>
   <script>
@@ -32,53 +34,8 @@
 
 
 
- <!--
-   weiterer Inhalt der Website
-   
-   
-   -Services
 
--Video von mir
--und der Sound über audio einzeln
--Impressum
- -->
-<!--
 
-  <div class="window">
-    <div class="header">
-      <div class="burger-container">
-          <div id="burger">
-              <div class="bar topBar"></div>
-              <div class="bar btmBar"></div>
-          </div>
-      </div>
-      <div class="icon icon-apple"></div>
-      <ul class="menu">
-          
-          <li class="menu-item">
-              <a href="#">iPad</a>
-          </li>
-          <li class="menu-item">
-            <a href="#">iPhone</a>
-          </li>
-          <li class="menu-item">
-              <a href="#">Watch</a>
-            </li>
-            
-          </ul>
-          <div class="shop icon icon-bag"></div>
-        </div>
- </div>
- <script>(function(){
-  var burger = document.querySelector('.burger-container'),
-      header = document.querySelector('.header');
-  
-  burger.onclick = function() {
-    header.classList.toggle('menu-opened');
-  }
-}());</script>
-
--->
 
 
  
@@ -90,19 +47,19 @@
     <div class="nav-wrapper">
       <!-- Navbar Logo -->
       <div class="logo">
-        <!-- Logo Placeholder for Inlustration -->
+        <!-- Logo Placeholder for Ilustration -->
         <a href="#home"><i class="fa fa-light fa-code" id="codelogo"></i>  <h2 class="h22">
-          <span class="spans">   Julian Steiner</span>
-          <span class="spans">  Julian Steiner</span>
-          <span class="spans">Julian Steiner</span>
+          <span class="spans" id="title">   Julian Steiner</span>
+          <span class="spans" id="title">  Julian Steiner</span>
+          <span class="spans" id="title">Julian Steiner</span>
           <span class="spans">  Webdevelopment</span>
-          <span class="spans">  Webdevelopment</span>
+          <span class="spans" >  Ihre Webseite?</span>
         </h2></a>
       </div>
 
       <!-- Navbar Menu -->
      
-      <label class="hamburger-menu">
+     <!--<label class="hamburger-menu">
         <input type="checkbox" />
       </label>
       <aside class="sidebar">
@@ -112,46 +69,12 @@
           <a href="#about">ÜBER MICH</a>
           <a href="#contact">KONTAKT</a>
         </nav>
-      </aside>
+      </aside> -->
    
-      <style>
-        .sidebar a {
-          display: block;
-      
-          text-decoration: none;
-          
-       
-        }
-@media  screen and (max-width:668px) {
-  
-  #codelogo{
-   display: none;
-     }
-}
-        @media screen and (min-width: 668px) {
-          .sidebar {
-            display: none;
-           
-          }
-          .hamburger-menu:has(input:checked) {
-          color: white;
-          }
-        }
-      
-        @media screen and (max-width: 768px) {
+      <style>    .sidebar a {display: block;    text-decoration: none; }@media  screen and (max-width:800px) {  #codelogo{  display: none;}}   @media screen and (min-width: 800px) { .sidebar { display: none; } .hamburger-menu:has(input:checked) {  color: white; }}   @media screen and (max-width: 768px) { :root {  --bar-width: 60px;  --bar-height: 8px;  --hamburger-gap: 6px; --foreground: #333; --background: white; --hamburger-margin: 10px; --animation-timing: 200ms ease-in-out;   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);  }}
+
         
-        :root {
-          --bar-width: 60px;
-          --bar-height: 8px;
-          --hamburger-gap: 6px;
-          --foreground: #333;
-          --background: white;
-          --hamburger-margin: 10px;
-          --animation-timing: 200ms ease-in-out;
-          --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-        }}
-        
-        .hamburger-menu {
+ .hamburger-menu {
           --x-width: calc(var(--hamburger-height) * 1.41421356237);
           display: flex;
           flex-direction: column;
@@ -160,7 +83,7 @@
           position: fixed;
           top: var(--hamburger-margin);
           left: var(--hamburger-margin);
-          z-index: 2000000;
+          z-index: 2000000000000000000000000000000000;
           cursor: pointer;
         }
         
@@ -226,14 +149,15 @@
           color: var(--background);
           max-width: 10rem;
           min-height: 100vh;
-         
+          position: absolute;
+          z-index: 100000;
         }
         
         .hamburger-menu:has(input:checked) + .sidebar {
           translate: -20%;
         }</style>
       <button type="button" onclick="aud_play_pause()" id="play" >
-     <!-- <svg version="1.1" id="plays" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="50px" width="50px"
+     <!--<svg version="1.1" id="plays" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="50px" width="50px"
       viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
       <path class="stroke-solid" fill="none" stroke="#ddbe72"  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
       C97.3,23.7,75.7,2.3,49.9,2.5"/>
@@ -282,30 +206,158 @@ playButton.addEventListener('click', e => {
     </div>
   </nav>
   
+  <!--ham menu-->
+  <label class="hamburger-menu">
+    <input type="checkbox" />
+  </label>
+  <aside class="sidebar">
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#services">SERVICE</a>
+      <a href="#about">ÜBER MICH</a>
+      <a href="#contact">KONTAKT</a>
+    </nav>
+  </aside>
+  <style>
+    .sidebar a {
+      display: block;
   
-  
-  <!-- Menu Icon -->
-  <div class="menuIcon">
-    <span class="icon icon-bars"></span>
-    <span class="icon icon-bars overlay"></span>
-  </div>
-  
-  
-  <div class="overlay-menu">
-    <ul id="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      text-decoration: none;
       
-  </div> 
+   
+    }
+@media  screen and (max-width:668px) {
+
+#codelogo{
+display: none;
+ }
+}
+    @media screen and (min-width: 668px) {
+      .sidebar {
+        display: none;
+       
+      }
+      .hamburger-menu:has(input:checked) {
+      color: white;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+    
+    :root {
+      --bar-width: 60px;
+      --bar-height: 8px;
+      --hamburger-gap: 6px;
+      --foreground: #333;
+      --background: white;
+      --hamburger-margin: 10px;
+      --animation-timing: 200ms ease-in-out;
+      --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    }}
+    
+    .hamburger-menu {
+      --x-width: calc(var(--hamburger-height) * 1.41421356237);
+      display: flex;
+      flex-direction: column;
+      gap: var(--hamburger-gap);
+      width: max-content;
+      position: fixed;
+      top: var(--hamburger-margin);
+      left: var(--hamburger-margin);
+      z-index: 2000000;
+      cursor: pointer;
+    }
+    
+    .hamburger-menu:has(input:checked) {
+      --background: #333;
+    }
+    
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+      border: 1px solid var(--background);
+      box-shadow: 0 0 0 1px var(--foreground);
+    }
+    
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+      content: "";
+      width: var(--bar-width);
+      height: var(--bar-height);
+      background-color: var(--foreground);
+      border-radius: 9999px;
+      transform-origin: left center;
+      transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+    }
+    
+    .hamburger-menu input {
+      appearance: none;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      pointer-events: none;
+    }
+    
+    .hamburger-menu:has(input:checked)::before {
+      rotate: 45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / -2);
+  background-color: white;
+    }
+    
+    .hamburger-menu:has(input:checked)::after {
+      rotate: -45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / 2);
+background-color: white;
+    }
+    
+    .hamburger-menu input:checked {
+      opacity: 0;
+      width: 0;
+      
+    }
+    
+    .sidebar {
+      transition: translate var(--animation-timing);
+      translate: -200%;
+      padding: 0.5rem 1rem;
+      padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+      background-color: var(--foreground);
+      color: var(--background);
+      max-width: 10rem;
+      min-height: 100vh;
+     
+     
+    }
+    .sidebar a {padding:30% 0 3% 0;}
+    .hamburger-menu:has(input:checked) + .sidebar {
+      translate: 0%;
+    }</style>
+  
+   <!--Menu Icon 
+  <div class="menuIcon"style="right:200px;position:fixed;z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000;"  >
+    <span class="icon icon-bars" ></span>
+    <span class="icon icon-bars overlay">
+   <ul class="overlay-menu"  style="top:8%; left: -500%; ">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul> </span>
+  </div>  
+  
+  
+
   <script>
   let menuIcon = document.querySelector('.menuIcon');
   let nav = document.querySelector('.overlay-menu');
 
   menuIcon.addEventListener('click', () => {
-      if (nav.style.transform != 'translateX(0%)') {
+    if (nav.style.transform != 'translateX(0%)') {
           nav.style.transform = 'translateX(0%)';
           nav.style.transition = 'transform 0.2s ease-out';
       } else { 
@@ -317,52 +369,20 @@ playButton.addEventListener('click', e => {
 
   // Toggle Menu Icon ========================================
   let toggleIcon = document.querySelector('.menuIcon');
-
+  
   toggleIcon.addEventListener('click', () => {
+    
       if (toggleIcon.className != 'menuIcon toggle') {
           toggleIcon.className += ' toggle';
-      } else {
-          toggleIcon.className = 'menuIcon';
+      } else
+         {   toggleIcon.className = 'menuIcon';
       }
   });
   </script>
+-->
+  
+  
 
-  
-  
-<!-- mobile menu
-  <div class="window"></div>
-  <div class="header"></div>
-  <div Class="burger-container"> </div>
-            <div id="burger"></div>
-                <div class="bar.topBar"></div>
-                <div class="bar.btmBar"> </div>
-     
-        <div class="icon.icon-apple"></div>
-    
-        <ul class="menu">
-          <li class.menu-item>
-          <a href="#">
-            Mac
-          </a>
-          </li>
-          <li class.menu-item>
-            <a href="#">
-              Mac
-            </a>
-          </li> <li class.menu-item>
-            <a href="#">
-                Mac
-              </a>
-              </li> <li class.menu-item>
-                <a href="#">
-                  Mac
-                </a>
-                </li> 
-            
-        </ul>
-        <div class="shop.icon.icon-bag"></div>
-        
-      --> 
     <div class="content"></div>  
         
 
@@ -370,26 +390,30 @@ playButton.addEventListener('click', e => {
   <!-- Home Section -->
   
   
+  
   <div id="home">
-    
+  
     <div class="container">
-      <div class="section">
+      <div class="section"> 
         <header>
-          
           
 
     <!--Title-->
     <section>
+      <div id="waviyfixed">
       <div class="waviy">
-        <span style="--i:1">J</span>
-        <span style="--i:2">u</span>
-        <span style="--i:3">l</span>
-        <span style="--i:4">i</span>
-        <span style="--i:5">a</span>
-        <span style="--i:6">n</span>
-   
-        
-    </div>
+        <span style="--i:1">W</span>
+        <span style="--i:2">e</span>
+        <span style="--i:3">b</span>
+        <span style="--i:4">d</span>
+        <span style="--i:5">e</span>
+        <span style="--i:6">s</span>
+        <span style="--i:7">i</span>
+        <span style="--i:8">g</span>
+        <span style="--i:9">n</span>
+      </div>
+      <b class="bwave" style="color:white"> by Julian Steiner</b>
+     </div>
       <!--
       <div class="content">
         <h2>Julian</h2>
@@ -438,20 +462,213 @@ user-select: none;
 
 
 
-      <div class="section"><div id="services">
-
-      </div>
+      <div class="section">
         <video playsinline autoplay muted loop poster="Portfolio Video.mp4" id="bgvid">
           
-          <source src="WebsiteVideo.mp4" type="video/mp4"  >
+          <source src="Website Vid final.mp4" type="video/mp4"  >
         </video>
       
     </div>
       <div class="section">
  
 </div>
+<div class="section" ><div id="services"> </div>
+<p style="position:absolute;writing-mode: vertical-lr;color: white;font-size: 60px;right: 3%; margin-top: 12%;"><b>Julian Steiner</b></p>
+  <div class="container" >
+    <div class="card" >
+        <h3 > </h3>
+        <p>Innerhalb dieses Plans werde ich ihnen eine normale Webseite fertigstellen welche ihren Job macht, aber keine weiteren Animationen oder größere Designs hat. </p>
+        <button onclick="window.location.href=''" title="">50-100€ </button>
+    </div>
+    <div class="card" >
+        <h3></h3>
+        <p>In diesem Plan werde ich mich mit ihnen über ein Thema einigen, durch welches die Webseite gestaltet ist.</p>
+        <button onclick="window.location.href=''" title="">100-200€</button>
+    </div>
+    <div class="card" >
+        <h3></h3>
+        <p>Hier werde ich auf alle ihre Wünsche eingehen und in nahem Kontakt zu ihnen stehen um Änderungen an der Website vorzunehmen und sie bestmöglich gestalten, zudem werde ich auf SEO eingehen um die Website für Suchmaschinen sichtbar zu machen.</p>
+        <button onclick="window.location.href=''" title="">Variabel</button>
+    </div>
+</div>
+
+</div>
+<style>.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    position: relative;
+    width: var(--card-width);
+    height: var(--card-height);
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff33,
+      #3c66e34e 43%,
+      #4e00c266
+    );
+    position: absolute;
+    z-index: -1;
+    top: 36%;
+    left: -2%;
+    animation: spin 4.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+
+  .card {
+    position: relative;
+    width: var(--card-width);
+    height: var(--card-height);
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff33,
+      #3c66e34e 43%,
+      #4e00c266
+    );
+    position: absolute;
+    z-index: -1;
+    top: 36%;
+    left: -2%;
+    animation: spin 4.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+  .card {
+    width: 260px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0.738);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin: 3.5%;
+    position: relative;
+  }
+  .card p {
+    padding: 10px;
+  }
+  .card h3 {
+    padding: 25px;
+    margin-top: 18%;
+  }
+
+  .card:hover {
+    scale: 1.2;
+  }
+  .card:nth-child(1) {
+    background-image: url(basic.jpeg);
+    background-size: 100% 36%;
+    background-repeat: no-repeat;
+    background-color: rgb(59, 163, 126);
+    background-image: linear-gradient(
+      to bottom rgb(110, 194, 148) rgb(59, 163, 126)
+    );
+  }
+  .card:nth-child(2) {
+    background-image: url(intermediate.jpeg);
+    background-size: 100% 36%;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+    background-image: linear-gradient(
+      to bottom rgb(110, 194, 148) rgb(59, 163, 126)
+    );
+  }
+  
+  .card:nth-child(3) {
+    background-image: url(personal.jpeg );
+    background-size: 100% 36%;
+    background-repeat: no-repeat;
+    background-color: rgb(150, 219, 195);
+  }
+  .card p {
+    padding-top: 15%;}
+    .card button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+  }
+</style>
+
+
 
 <div class="section">
+ 
+
+ <p data-aos="flip-up" style="color:white; font-size: 20px;  text-align: center; box-shadow:  rgba(0, 0, 0, 1.1);
+ background-color: #292929a1;
+  border: 1px solid rgba(255, 250, 250, 0.27);
+  padding: 10px;
+  
+  margin: 5% 30% 0px 30%; "> Neben diesen Interessen beschäftige ich mich auch mit der Fotografie
+     </p>
+  
+    
+   
+		
+	
+
 <div class="slider">
   <div class="rotator">
     <div class="items">
@@ -604,14 +821,14 @@ user-select: none;
 
 -->
 </div>
-<div id="about">
+<div id="about" >
 </div>
 <div class="sections">
 
 <div data-aos="fade-up"
 data-aos-anchor-placement="bottom-bottom">
 <h3 data-aos="fade-up"
-data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian Steiner 18 Jahre alt und beschäfige micht seit 1,5 Jahren mit der Programmierung von Webseiten</h3></div>
+data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian Steiner 18 Jahre alt und beschäftige micht seit 1,5 Jahren mit der Programmierung von Webseiten</h3></div>
    
     <div data-aos="zoom-in"  data-aos-duration="1000000"><h2 class="h2">Über mich</h2></div>
    
@@ -665,8 +882,8 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
         <div>
           <input type="checkbox" class="read-more-state" id="post-1" />
         
-          <p class="read-more-wrap">  Was ist eigentlich Schicksal? Schicksal ist eine Art vorbestimmter Lebensweg welcher von der Sichtweise abhängend schon immer vorbestimmt und klar war. Es kann beeinflussen, dass man Entscheidungen genau so trifft wie es das Schicksal will, so das man irgendwann im Leben zu dem Punkt kommt wo das Schicksal einen hingeschickt hat. Doch es hängt immer von der Sichtweise jedes Menschen ab in wie weit man denkt das das Schicksal existiert. <span class="read-more-target"> Es gibt viele Menschen, die gar nicht erst glauben das das Schicksal existiert und auch welche die nur in extremen Glücksfällen daran glauben. Es gibt auch noch die extremere  Variante in der manche Menschen denken, dass das Leben komplett vorbestimmt ist und wirklich JEDE Entscheidung bereits vom Schicksal entschieden wurde. Und wenn man eine Entscheidung nicht fällt um von dem Schicksal abzuweichen kann es sehr gut sein das dieser Teil bereits zum Schicksal gehört. Kann man wirklich an sein oder das Schicksal glauben und vertrauen? Es gibt immer wieder Momente im Leben in denen man fast sogar glauben muss das das Schicksal existiert, da man z.B. auf einmal sehr viel Glück hat oder auch Pech und man könnte sich denken, dass das eigene Schicksal es so für einen will und es so bestimmt ist. Doch es ist wirklich jedem überlassen ob man an das Schicksal glaubt oder nicht. Dies kann auch viel mit dem Glauben zu tun haben, da Gläubige sozusagen auf etwas warten und das Schicksal könnte dies erfüllen, da eine Tat Gottes auch als Schicksal gewertet werden könnte. Glauben und Schicksal ähneln sich eigentlich sogar sehr, da beide den weiteren Lebensweg beeinflussen. Man ist als Mensch meist nur richtig gläubig, wenn man bereits Geschehnisse im Leben hatte, in welchen man sehr viel Glück hatte und daran Glauben muss und wenn dies nicht der Fall ist besteht der Glauben nur aus einer dünnen geistigen Ebene. Das Wort Schicksal wird z.B. verwendet wenn man mit etwas abschließt und die Folgen in Kauf nimmt und sich sozusagen seinem Schicksal fügt oder sein Schicksal besiegelt. Mann kann es auch verwenden indem man es mit Glück in Bezug nimmt indem man sein Schicksal herausfordert und somit darauf hofft, dass das Schicksal einem Glück bringt. Im Gegenzug zu den Menschen die an das Schicksal glauben stehen die die Fakten in den Mittelpunkt des Lebens stellen und sich bewusst sind das nicht das Schicksal einen an diese Stelle im Leben befördert hat, sondern die eigenen Taten und harte Arbeit. 
-    Ich persönlich glaube nicht an das Schicksal welches einen das ganze Leben über begleitet und führt, sondern an einige Zufälle, welche in dem Moment eine Gabe des Schicksals sind aber auch wieder abebben. Es hängt auch davon ab wie viele Prägende Erfahrungen der Mensch in seinem Leben gemacht hat, wodurch auch das alter eine Rolle spielt. Schicksal kann man auch mit dem Wort Zufall in Verbindung bringen, da etwas beim Schicksal genau wie beim Zufall plötzlich und unvorbereitet eintrifft.
+          <p class="read-more-wrap"> Was ist eigentlich Schicksal? Schicksal ist eine Art vorbestimmter Lebensweg, welcher von der Sichtweise abhängend schon immer vorbestimmt und klar war. Es kann beeinflussen, dass man Entscheidungen genau so trifft, wie es das Schicksal will, sodass man irgendwann im Leben zu dem Punkt kommt, wo das Schicksal einen hingeschickt hat. Doch es hängt immer von der Sichtweise jedes Menschen ab, inwieweit man denkt, dass das Schicksal existiert.<span class="read-more-target">  Es gibt viele Menschen, die gar nicht erst glauben, dass das Schicksal existiert und auch welche, die nur in extremen Glücksfällen daran glauben. Es gibt auch noch die extremere Variante, in der manche Menschen denken, dass das Leben komplett vorbestimmt ist und wirklich JEDE Entscheidung bereits vom Schicksal entschieden wurde. Und wenn man eine Entscheidung nicht fällt, um von dem Schicksal abzuweichen, kann es sehr gut sein, dass dieser Teil bereits zum Schicksal gehört. Kann man wirklich an sein oder das Schicksal glauben und vertrauen? Es gibt immer wieder Momente im Leben, in denen man fast sogar glauben muss, dass das Schicksal existiert, da man z.B. auf einmal sehr viel Glück hat oder auch Pech und man könnte sich denken, dass das eigene Schicksal es so für einen will und es so bestimmt ist. Doch es ist wirklich jedem überlassen, ob man an das Schicksal glaubt oder nicht. Dies kann auch viel mit dem Glauben zu tun haben, da Gläubige sozusagen auf etwas warten und das Schicksal könnte dies erfüllen, da eine Tat Gottes auch als Schicksal gewertet werden könnte. Glauben und Schicksal ähneln sich eigentlich sogar sehr, da beide den weiteren Lebensweg beeinflussen. Man ist als Mensch meist nur richtig gläubig, wenn man bereits Geschehnisse im Leben hatte, in welchen man sehr viel Glück hatte und daran glauben muss und wenn dies nicht der Fall ist, besteht der Glauben nur aus einer dünnen geistigen Ebene. Das Wort Schicksal wird z.B. verwendet, wenn man mit etwas abschließt und die Folgen in Kauf nimmt und sich sozusagen seinem Schicksal fügt oder sein Schicksal besiegelt. Mann kann es auch verwenden, indem man es mit Glück in Bezug nimmt, indem man sein Schicksal herausfordert und somit darauf hofft, dass das Schicksal einem Glück bringt. Im Gegenzug zu den Menschen, die an das Schicksal glauben, stehen die, die Fakten in den Mittelpunkt des Lebens stellen und sich bewusst sind, dass nicht das Schicksal einen an diese Stelle im Leben befördert hat, sondern die eigenen Taten und harte Arbeit. 
+Ich persönlich glaube nicht an das, Schicksal, welches einen das ganze Leben über begleitet und führt, sondern an einige Zufälle, welche in dem Moment eine Gabe des Schicksals sind, aber auch wieder abebben. Es hängt auch davon ab, wie viele prägende Erfahrungen der Mensch in seinem Leben gemacht hat, wodurch auch das Alter eine Rolle spielt. Schicksal kann man auch mit dem Wort Zufall in Verbindung bringen, da etwas beim Schicksal genau wie beim Zufall plötzlich und unvorbereitet eintrifft.
     </span></p>
           
           <label for="post-1" class="read-more-trigger"> 
@@ -699,6 +916,8 @@ data-aos-anchor-placement="bottom-bottom" class="text1">Hallo, ich bin Julian St
   <img id="skills2" src="CSS.png"style="width:80%; height:auto" >
   <img id="skills3" src="Responsive webdesign.png" style="width:80%; height:auto">
   <img id="skills3" src="webdevfundamentals.png" style="width:80%; height:auto">
+  <img id="skills3" src="Javasrcipt Sololearn.png" style="width:80%; height:auto">
+  <!--<img id="skills3" src="PHP Sololearn.png" style="width:80%; height:auto">-->
 </div>
 
 
@@ -765,7 +984,7 @@ function jump(){
 
     <hr>
 
-   <div class="seethrough"><div id="contact"></div>
+   <div class="seethrough"><div id="contact"></div><br><br><br>
     <footer>
       
           <p> <div id="h1">
@@ -774,10 +993,10 @@ function jump(){
          </p>
       
       
-            Julian Steiner<br>
+            <p style="color:rgba(255, 255, 255, 0.423)">Julian Steiner</p><br>
           
-      <a class="mail" href="mailto:j.b.steiner.2004@gmail.com">
-          j.b.steiner.2004@gmail.com</a>
+      <a  class="mail" href="mailto:mail@juliansteiner.de">
+          mail@juliansteiner.de</a>
       
        <br><br><br> 
        <form action="index.html" method="post">
@@ -800,15 +1019,14 @@ function jump(){
               <h4>Abschicken</h4> </button>
           </form>
       </div>
-      <h4 style="color: aliceblue; text-decoration: underline;font-size: 1em;transform: translateY(-30%);">
-       <a href="Impressum.html"style="display:block;"> Impressum</a> <a href="Cookies.html">  Cookies </a>
+      <h4 style="color: aliceblue;transform: translateY(-30%);">
+       <a href="Impressum.html"style="display:block; margin:0 46% 0 46% ;"> Impressum</a> <a href="Cookies.html">  Cookies </a>
       </h4>
         
-      <iframe id="splinedesign" src='https://my.spline.design/untitled-fea94203c6ff161a61d8015733e92155/'  frameborder='0'  width="30%" height="600px"style="background-color:transparent"></iframe>
-     
+      
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a>.  
       </footer>
-   </div>
+  </div>
  
    
 
