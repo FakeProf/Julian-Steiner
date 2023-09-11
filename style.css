@@ -118,7 +118,29 @@ footer a:after {
   transition-duration: 400ms;
   transition-property: width, left;
 }
-  
+
+@media screen and (min-width: 1600px){
+  #video-web{
+    width: 920px;
+    height: 555px;
+    margin:0 25% 0 25%;
+  }
+ }
+ @media screen and (max-width: 1600px){
+  #video-web{
+    width: 920px;
+    height: 555px;
+    margin:0 20% 0 20%;
+  }
+ }
+ @media screen and (max-width: 800px){
+  #video-web{
+    width: 920px;
+    height: 555px;
+    margin:0 0 0 0;
+    transform: translateY(-50%);
+  }
+ }
   @media screen and (min-width: 1600px){
   .cookie-banner {
     position: fixed;
