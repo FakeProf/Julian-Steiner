@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Impressum</title>
-        <style>body {
-            font-family: Arial, sans-serif;
-            margin: 0;
+        <title>Cookies</title>
+        <style>
+
+
+ 
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+            height: 100vh;
             padding: 0;
             background-image: url("https://fakeprof.github.io/Julian-Steiner/%C3%A4ste%20im%20winter.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
 }
 
 header {
@@ -17,31 +26,32 @@ header {
 }
 
 main {
-	padding: 20px;
+  padding: 20px;
 }
 
 section {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
     text-align: center;
     color: rgb(128, 13, 243);
     margin-top: 10%;
     background-color: rgba(127, 255, 212, 1.178);
     width: max-content;
-    transform: translateX(130%);
-}
-
-h1, h2 {
-	text-align: center;
+  
+  }
+  
+  h1, h2 {
+    text-align: center;
 }
 
 footer {
-	background-color: #333;
+  background-color: #333;
 	color: #fff;
 	text-align: center;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
+
 </style>
 </head>
 <body>
@@ -49,30 +59,53 @@ footer {
 	<header>
 		<h1>Cookies</h1>
 	</header>
-	<main>
+	<main style="display: flex; justify-content: center; align-items:center">
 		<section>
-		<p>
-            Zur Zeit werden nur durch Spline design Cookies erhoben
+		<p style="font-size: 2vh;">
+           Derzeit werden noch keine Cookies erhoben.
+            <br>
+
+
         </p>
 		</section>
    
-	
+	<button class="btn" onclick="window.location.href='https://juliansteiner.de/index.html';" style="transform: translate(-200%, 600%) ;">Zurück</button>
 	</main>
-    <label class="hamburger-menu">
+   
+       
+        
+        
+       <label class="hamburger-menu">
         <input type="checkbox" />
       </label>
       <aside class="sidebar">
         <nav>
-          <div>This</div>
-          <div>Is</div>
-          <div>The</div>
-          <div>Sidebar</div>
+          <a href="https://juliansteiner.de/#home">HOME</a>
+          <a href="https://juliansteiner.de/#services">SERVICE</a>
+          <a href="https://juliansteiner.de/#about">ÜBER MICH</a>
+          <a href="https://juliansteiner.de/#contact">KONTAKT</a>
         </nav>
       </aside>
+
+
+   
       <style>
+        .sidebar a {
+          display: block;
+      
+          text-decoration: none;
+          
        
-        
-        
+        }
+
+        @media screen and (min-width: 668px) {
+         
+          .hamburger-menu:has(input:checked) {
+          color: white;
+          }
+        }
+      
+        @media screen and (max-width: 768px) {
         
         :root {
           --bar-width: 60px;
@@ -80,27 +113,25 @@ footer {
           --hamburger-gap: 6px;
           --foreground: #333;
           --background: white;
-          --hamburger-margin: 8px;
+          --hamburger-margin: 10px;
           --animation-timing: 200ms ease-in-out;
           --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-        }
+        }}
         
         .hamburger-menu {
           --x-width: calc(var(--hamburger-height) * 1.41421356237);
-        
           display: flex;
           flex-direction: column;
           gap: var(--hamburger-gap);
           width: max-content;
-          position: absolute;
+          position: fixed;
           top: var(--hamburger-margin);
           left: var(--hamburger-margin);
-          z-index: 20000;
+          z-index: 2000000;
           cursor: pointer;
         }
         
         .hamburger-menu:has(input:checked) {
-          --foreground: white;
           --background: #333;
         }
         
@@ -137,35 +168,161 @@ footer {
           rotate: 45deg;
           width: var(--x-width);
           translate: 0 calc(var(--bar-height) / -2);
+      background-color: white;
         }
         
         .hamburger-menu:has(input:checked)::after {
           rotate: -45deg;
           width: var(--x-width);
           translate: 0 calc(var(--bar-height) / 2);
+    background-color: white;
         }
         
         .hamburger-menu input:checked {
           opacity: 0;
           width: 0;
+          
         }
         
         .sidebar {
           transition: translate var(--animation-timing);
-          translate: -100%;
+          translate: -200%;
           padding: 0.5rem 1rem;
           padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
           background-color: var(--foreground);
           color: var(--background);
           max-width: 10rem;
           min-height: 100vh;
+         
         }
         
         .hamburger-menu:has(input:checked) + .sidebar {
-          translate: 0;
-        }</style>-->
+          translate: -20%;
+        }</style>
+      
 	<footer>
 		<p> 2023 Julian Steiner</p>
 	</footer>
+  <style>
+    .btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+  </style>
 </body>
 </html>
