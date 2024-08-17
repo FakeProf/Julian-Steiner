@@ -1128,6 +1128,8 @@ img{
     height: 50vh;
       padding-left: 35%;
       margin-top: 5%;
+  
+   
   }
 .text {
        
@@ -1681,7 +1683,6 @@ figure.snip12134.hover figcaption {
   z-index: 0;
   width: auto;
   
-background-color: rgba(45, 18, 18, 0.5);
 
 }
 
@@ -2888,7 +2889,9 @@ justify-content: center;
       background-color: skyblue;
       position: sticky;overflow: hidden;top:0;
   }
-  
+  #contact{
+    height: 100%;
+  }
   /*Game*/
   #game {
     width: 70%;
@@ -3648,6 +3651,7 @@ justify-content: center;
   .seethrough{
     z-index: 0;
     width: auto;
+    height: 745px;
     
   background-color: rgba(45, 18, 18, 0.5);
   
