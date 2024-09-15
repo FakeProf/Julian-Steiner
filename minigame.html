@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h3  style="margin-top: 5%;text-align: center;"  >
+    
+    Kleines mini game
+  </h3>
+  <div id="game" onclick="jump()">
+    <div id="character">:)</div>
+    <div id="block">:(</div>
+  </div>
+  
+<a href="minigame2.html">Nächstes</a>
+
+<script> 
+
+  
+  var character = document.getElementById("character");
+var block = document.getElementById("block");
+var counter=0;
+function jump(){
+  if(character.classList == "animate"){return}
+  character.classList.add("animate");
+  setTimeout(function(){
+    character.classList.remove("animate");
+  },300);
+  
+  block.style.animation = "block 1s infinite linear";
+
+    block.classList.add("animates");
+    
+  }
+  var checkDead = setInterval(function() {
+    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
+      block.style.animation = "none";
+      alert("Game Over. score: "+Math.floor(counter/100));
+      counter=0;
+    }else{
+      counter++;
+      document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+    }
+  }, 10);
+  
+</script>
+
+
+
+
+
+<div class="circle"></div>
+
+<div class="counter"></div>
+   
+    </div>
+
+
+    <style>
+    html, body {background-color: beige;}
+    #game {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #game {
+        width: 70%;
+        margin:0 15% 20% 15%;
+        height: 200px;
+        border: 1px solid black;
+       
+      }
+      #character {
+        width: 20px;
+        height: 50px;
+        background-color: rgb(255, 0, 234);
+        position: relative;
+        
+        top: 150px;}
+        .animate{
+        animation: jump 500ms ;
+      }
+      @keyframes jump {
+        0% {
+          top: 150px;
+        }
+        30% {
+          top: 100px;
+        }
+        70% {
+          top: 100px;
+        }
+        100% {
+          top: 150px;
+        }
+      }
+      
+      
+      
+      #block{
+        width: 20px;
+        height: 20px;
+        background-color: rgb(204, 204, 141);
+        position: relative;
+        top: 130px;
+        left: 880px;
+      }
+      .animates{animation:  block 1s infinite linear;
+      }
+      
+      @keyframes block {
+        0% {
+          left: 880px;
+        }
+        100% {
+          left: -40px;
+        }
+      }</style>
+      </body>
+</html>
